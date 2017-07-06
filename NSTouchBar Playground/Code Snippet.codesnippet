@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>maketouchbar</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#ifdef NSAppKitVersionNumber10_12_2
+#pragma mark NSTouchBarProvider
+
+- (NSTouchBar *)makeTouchBar
+{
+    NSTouchBar *bar = [[NSTouchBar alloc] init];
+    bar.delegate = (id &lt;NSTouchBarDelegate&gt;)self;
+    
+    bar.customizationIdentifier = NSStringFromClass(self.class);
+    bar.defaultItemIdentifiers = @[&lt;#button#&gt;.identifier, NSTouchBarItemIdentifierOtherItemsProxy];
+    
+    return [bar autorelease];
+}
+
+#pragma mark NSTouchBarDelegate
+- (nullable NSTouchBarItem *)touchBar:(NSTouchBar *)touchBar makeItemForIdentifier:(NSTouchBarItemIdentifier)identifier
+{
+    if ([identifier isEqualToString:&lt;#button#&gt;.identifier]) {
+        NSCustomTouchBarItem * item = [NSCustomTouchBarItem buttonItemWithButton:&lt;#button#&gt;];
+        [item.button bind:@"enabled" toObject:&lt;#button#&gt; withKeyPath:@"enabled" options:nil];
+        return item;
+    }
+    return nil;
+}
+
+#endif</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>EC5E4107-417D-43FB-A773-A88272C2A838</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>macosx</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>MakeTouchBar</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>TouchBar Template</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

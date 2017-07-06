@@ -12,6 +12,8 @@
 		2F870D621F0E3C8B00CE601A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F870D611F0E3C8B00CE601A /* ViewController.m */; };
 		2F870D641F0E3C8B00CE601A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F870D631F0E3C8B00CE601A /* Assets.xcassets */; };
 		2F870D671F0E3C8B00CE601A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F870D651F0E3C8B00CE601A /* Main.storyboard */; };
+		2F870D701F0E3EA300CE601A /* NSCustomTouchBarItem+BRConvenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F870D6F1F0E3EA300CE601A /* NSCustomTouchBarItem+BRConvenience.m */; };
+		2F870D741F0E40E800CE601A /* Code Snippet.codesnippet in Resources */ = {isa = PBXBuildFile; fileRef = 2F870D731F0E40E800CE601A /* Code Snippet.codesnippet */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,9 @@
 		2F870D631F0E3C8B00CE601A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F870D661F0E3C8B00CE601A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F870D681F0E3C8B00CE601A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F870D6E1F0E3EA300CE601A /* NSCustomTouchBarItem+BRConvenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCustomTouchBarItem+BRConvenience.h"; sourceTree = "<group>"; };
+		2F870D6F1F0E3EA300CE601A /* NSCustomTouchBarItem+BRConvenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCustomTouchBarItem+BRConvenience.m"; sourceTree = "<group>"; };
+		2F870D731F0E40E800CE601A /* Code Snippet.codesnippet */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Code Snippet.codesnippet"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +65,9 @@
 				2F870D5B1F0E3C8B00CE601A /* AppDelegate.m */,
 				2F870D601F0E3C8B00CE601A /* ViewController.h */,
 				2F870D611F0E3C8B00CE601A /* ViewController.m */,
+				2F870D731F0E40E800CE601A /* Code Snippet.codesnippet */,
+				2F870D6E1F0E3EA300CE601A /* NSCustomTouchBarItem+BRConvenience.h */,
+				2F870D6F1F0E3EA300CE601A /* NSCustomTouchBarItem+BRConvenience.m */,
 				2F870D631F0E3C8B00CE601A /* Assets.xcassets */,
 				2F870D651F0E3C8B00CE601A /* Main.storyboard */,
 				2F870D681F0E3C8B00CE601A /* Info.plist */,
@@ -135,6 +143,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F870D741F0E40E800CE601A /* Code Snippet.codesnippet in Resources */,
 				2F870D641F0E3C8B00CE601A /* Assets.xcassets in Resources */,
 				2F870D671F0E3C8B00CE601A /* Main.storyboard in Resources */,
 			);
@@ -149,6 +158,7 @@
 			files = (
 				2F870D621F0E3C8B00CE601A /* ViewController.m in Sources */,
 				2F870D5F1F0E3C8B00CE601A /* main.m in Sources */,
+				2F870D701F0E3EA300CE601A /* NSCustomTouchBarItem+BRConvenience.m in Sources */,
 				2F870D5C1F0E3C8B00CE601A /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
