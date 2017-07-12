@@ -1,5 +1,8 @@
 # NSTouchBar-Playground
 
-## NSCustomTouchBarItem+BRConvenience
+### NSCustomTouchBarItem+BRConvenience
 
-## Code Snippets
+### Code Snippets
+
+### NSTouchBar+BRPrivate
+    Use private API to add a Touch Bar buttons to the Control Strip.
