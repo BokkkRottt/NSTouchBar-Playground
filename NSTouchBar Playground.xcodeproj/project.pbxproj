@@ -29,6 +29,7 @@
 		2F870D6E1F0E3EA300CE601A /* NSCustomTouchBarItem+BRConvenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCustomTouchBarItem+BRConvenience.h"; sourceTree = "<group>"; };
 		2F870D6F1F0E3EA300CE601A /* NSCustomTouchBarItem+BRConvenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCustomTouchBarItem+BRConvenience.m"; sourceTree = "<group>"; };
 		2F870D731F0E40E800CE601A /* Code Snippet.codesnippet */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Code Snippet.codesnippet"; sourceTree = "<group>"; };
+		2F99A25E1F160D19000C1E2D /* NSTouchBar+BRPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTouchBar+BRPrivate.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +67,7 @@
 				2F870D601F0E3C8B00CE601A /* ViewController.h */,
 				2F870D611F0E3C8B00CE601A /* ViewController.m */,
 				2F870D731F0E40E800CE601A /* Code Snippet.codesnippet */,
+				2F99A25E1F160D19000C1E2D /* NSTouchBar+BRPrivate.h */,
 				2F870D6E1F0E3EA300CE601A /* NSCustomTouchBarItem+BRConvenience.h */,
 				2F870D6F1F0E3EA300CE601A /* NSCustomTouchBarItem+BRConvenience.m */,
 				2F870D631F0E3C8B00CE601A /* Assets.xcassets */,
@@ -311,6 +313,7 @@
 				2F870D6D1F0E3C8B00CE601A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
