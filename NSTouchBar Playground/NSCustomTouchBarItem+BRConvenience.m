@@ -29,19 +29,63 @@ NSString * BRRandomIdentifier() {
 
 @end
 
-@implementation NSCustomTouchBarItem (BRConvenience)
+@implementation NSTouchBar (ZMConvenience)
 
-+ (nullable instancetype)buttonItemWithButton:(NSButton *)button
++ (instancetype)touchaBar
 {
-    return [self buttonItemWithButton:button handler:nil];
+    return [[self alloc] init];
 }
 
-+ (nullable instancetype)buttonItemWithButton:(NSButton *)button handler:(nullable NS_NOESCAPE void (^)(NSButton * button))handler
+@end
+
+@implementation NSTouchBarItem (ZMConvenience)
+
+- (NSButton *)button
+{
+    if ([self.view isKindOfClass:[NSButton class]]) {
+        return (NSButton *)self.view;
+    }
+    return nil;
+}
+
+@end
+
+@implementation NSCustomTouchBarItem (BRConvenience)
+
++ (instancetype)itemWithIdentifier:(NSString *)identifier
+{
+    return [[NSCustomTouchBarItem alloc] initWithIdentifier:identifier];
+}
+
++ (instancetype)buttonItemWithIdentifier:(NSString *)identifier title:(nullable NSString *)title image:(nullable NSImage *)image target:(nullable id)target action:(nullable SEL)action
+{
+    NSCustomTouchBarItem * newItem = [self itemWithIdentifier:identifier];
+    NSButton * buttonView = nil;
+    if (title.length && image) {
+        buttonView = [NSButton buttonWithTitle:title image:image.templatedImage target:target action:action];
+    }
+    else if (image) {
+        buttonView = [NSButton buttonWithImage:image.templatedImage target:target action:action];
+    }
+    else {
+        buttonView = [NSButton buttonWithTitle:NSNullPlaceholderString(title, @"Button") target:target action:action];
+    }
+    
+    newItem.view = buttonView;
+    return newItem;
+}
+
++ (nullable instancetype)buttonItemWithAssociatedButton:(NSButton *)button
+{
+    return [self buttonItemWithAssociatedButton:button handler:nil];
+}
+
++ (nullable instancetype)buttonItemWithAssociatedButton:(NSButton *)button handler:(nullable NS_NOESCAPE void (^)(NSButton * button))handler
 {
     if (!button.identifier.length || button.hidden || !button.superview) {
         return nil;
     }
-    NSCustomTouchBarItem * newItem = [[NSCustomTouchBarItem alloc] initWithIdentifier:button.identifier];
+    NSCustomTouchBarItem * newItem = [self itemWithIdentifier:button.identifier];
     NSButton * buttonView = nil;
     if (button.title.length && button.image) {
         buttonView = [NSButton buttonWithTitle:button.title image:button.image.templatedImage target:button.target action:button.action];
@@ -66,12 +110,11 @@ NSString * BRRandomIdentifier() {
     return newItem;
 }
 
-- (NSButton *)button
+- (void)setButton:(NSButton *)button
 {
-    if ([self.view isKindOfClass:[NSButton class]]) {
-        return (NSButton *)self.view;
+    if ([button isKindOfClass:[NSButton class]]) {
+        self.view = button;
     }
-    return nil;
 }
 
 @end

@@ -11,14 +11,16 @@
 extern void DFRElementSetControlStripPresenceForIdentifier(NSString *, BOOL);
 extern void DFRSystemModalShowsCloseBoxWhenFrontMost(BOOL);
 
-@interface NSTouchBarItem (BRPrivate)
+@interface NSTouchBarItem (PrivateAPI)
 
-+ (void)addSystemTrayItem:(NSTouchBarItem *)item;
++ (void)addSystemTrayItem:(NSTouchBarItem *)item;//!<private API
++ (void)removeSystemTrayItem:(NSTouchBarItem *)item;//!<private API
 
 @end
 
-@interface NSTouchBar (BRPrivate)
+@interface NSTouchBar (PrivateAPI)
 
-+ (void)presentSystemModalFunctionBar:(NSTouchBar *)touchBar systemTrayItemIdentifier:(NSString *)identifier;
++ (void)presentSystemModalFunctionBar:(NSTouchBar *)touchBar systemTrayItemIdentifier:(NSString *)identifier;//!<private API
++ (void)dismissSystemModalFunctionBar:(NSTouchBar *)touchBar;//!<private API
 
 @end
